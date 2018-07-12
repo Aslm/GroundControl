@@ -118,6 +118,8 @@ class MeasureDistBetweenMotors(GridLayout):
         self.data = App.get_running_app().data
         self.data.measureRequest = self.readMotorSpacing
         
+        self.stopBtn.btnBackground              = self.data.iconPath + 'StopRed.png'
+        
         self.originalChainOverSproketDir = App.get_running_app().data.config.get('Advanced Settings', 'chainOverSprocket')
         
         #pretend we are in the "Top" configuration during this step

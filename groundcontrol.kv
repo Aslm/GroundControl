@@ -1135,6 +1135,7 @@
 <MeasureDistBetweenMotors>
     distToMove:distToMove
     distText:distText
+    stopBtn:stopBtn
     cols: 2
     width: root.width
     height: root.height
@@ -1171,9 +1172,9 @@
         Button:
             text: 'Pull Chain Tight\nand Measure'
             on_release: root.pullChainTightAndMeasure()
-        Button:
-            text: "Stop\nMotors"
-            on_release: root.stopCut()
+        ButtonTemplate:
+            id: stopBtn
+            funcToCallOnPress: root.stopCut
         Label:
 
 <MeasureOneChain>
